@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title description">
+  <title id="title">Run MooNsEvents locally in five visual steps</title>
+  <description id="description">Clone the repository, start Docker, run start.sh, open localhost port 8080, and stop with stop.sh while preserving local data.</description>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f" />
+      <stop offset="1" stop-color="#102640" />
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0l12 6-12 6z" fill="#607b98" />
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000814" flood-opacity="0.34" />
+    </filter>
+  </defs>
+  <rect width="1600" height="820" rx="28" fill="url(#background)" />
+  <circle cx="1450" cy="50" r="190" fill="#38bdf8" opacity="0.06" />
+  <text x="75" y="82" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="42" font-weight="750">Run locally with one launcher</text>
+  <text x="75" y="124" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="23">No separate Node.js, MySQL, Redis, Nginx, or Prisma installation required.</text>
+
+  <path d="M330 352h70M635 352h70M940 352h70M1245 352h70" stroke="#607b98" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)" />
+
+  <g transform="translate(55 180)" filter="url(#shadow)">
+    <rect width="275" height="345" rx="22" fill="#0e2036" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="45" cy="45" r="25" fill="#38bdf8" />
+    <text x="45" y="54" text-anchor="middle" fill="#06121f" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800">1</text>
+    <text x="82" y="54" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="25" font-weight="700">Clone</text>
+    <path d="M104 100h68l20 20v62h-88zM172 100v22h20M122 143h52M122 160h40" fill="none" stroke="#7dd3fc" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" />
+    <text x="28" y="225" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="18">Get the public code.</text>
+    <rect x="22" y="250" width="231" height="72" rx="10" fill="#081725" />
+    <text x="35" y="279" fill="#86efac" font-family="JetBrains Mono, Consolas, monospace" font-size="14">git clone ...</text>
+    <text x="35" y="303" fill="#86efac" font-family="JetBrains Mono, Consolas, monospace" font-size="14">cd moonsevents</text>
+  </g>
+
+  <g transform="translate(360 180)" filter="url(#shadow)">
+    <rect width="275" height="345" rx="22" fill="#0e2036" stroke="#2496ed" stroke-width="2" />
+    <circle cx="45" cy="45" r="25" fill="#2496ed" />
+    <text x="45" y="54" text-anchor="middle" fill="#06121f" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800">2</text>
+    <text x="82" y="54" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="25" font-weight="700">Docker</text>
+    <g transform="translate(79 96)" fill="#60bafa">
+      <rect x="0" y="25" width="25" height="22" rx="2" />
+      <rect x="30" y="25" width="25" height="22" rx="2" />
+      <rect x="60" y="25" width="25" height="22" rx="2" />
+      <rect x="30" y="0" width="25" height="20" rx="2" />
+      <rect x="60" y="0" width="25" height="20" rx="2" />
+      <path d="M-8 54h112c-6 37-33 53-64 53-31 0-50-14-57-31 13 2 21-2 27-10-8-3-13-7-18-12z" />
+    </g>
+    <text x="28" y="225" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="18">Start the engine.</text>
+    <rect x="22" y="250" width="231" height="72" rx="10" fill="#081725" />
+    <text x="35" y="279" fill="#7dd3fc" font-family="Inter, Segoe UI, sans-serif" font-size="16">Docker Desktop</text>
+    <text x="35" y="303" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="15">Wait until running</text>
+  </g>
+
+  <g transform="translate(665 180)" filter="url(#shadow)">
+    <rect width="275" height="345" rx="22" fill="#0e2036" stroke="#d7df4f" stroke-width="2" />
+    <circle cx="45" cy="45" r="25" fill="#d7df4f" />
+    <text x="45" y="54" text-anchor="middle" fill="#151802" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800">3</text>
+    <text x="82" y="54" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="25" font-weight="700">Start</text>
+    <rect x="48" y="98" width="179" height="100" rx="12" fill="#06121f" stroke="#405a75" />
+    <circle cx="67" cy="116" r="5" fill="#fb7185" />
+    <circle cx="84" cy="116" r="5" fill="#fbbf24" />
+    <circle cx="101" cy="116" r="5" fill="#4ade80" />
+    <text x="63" y="155" fill="#86efac" font-family="JetBrains Mono, Consolas, monospace" font-size="18">$ ./start.sh</text>
+    <text x="63" y="181" fill="#7dd3fc" font-family="JetBrains Mono, Consolas, monospace" font-size="13">building...</text>
+    <text x="28" y="225" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="18">Use Git Bash on Windows.</text>
+    <rect x="22" y="250" width="231" height="72" rx="10" fill="#081725" />
+    <text x="35" y="279" fill="#e8ef7a" font-family="Inter, Segoe UI, sans-serif" font-size="16">Keep logs open</text>
+    <text x="35" y="303" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="15">First run takes longer</text>
+  </g>
+
+  <g transform="translate(970 180)" filter="url(#shadow)">
+    <rect width="275" height="345" rx="22" fill="#0e2036" stroke="#4ade80" stroke-width="2" />
+    <circle cx="45" cy="45" r="25" fill="#4ade80" />
+    <text x="45" y="54" text-anchor="middle" fill="#06190f" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800">4</text>
+    <text x="82" y="54" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="25" font-weight="700">Open</text>
+    <rect x="46" y="98" width="183" height="104" rx="12" fill="#e8f0f7" />
+    <rect x="46" y="98" width="183" height="25" rx="12" fill="#b9c7d5" />
+    <circle cx="62" cy="111" r="4" fill="#64748b" />
+    <rect x="66" y="139" width="143" height="18" rx="5" fill="#d7df4f" />
+    <rect x="66" y="165" width="105" height="10" rx="4" fill="#8fa2b6" />
+    <text x="28" y="225" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="18">Sign in to your local app.</text>
+    <rect x="22" y="250" width="231" height="72" rx="10" fill="#081725" />
+    <text x="35" y="279" fill="#86efac" font-family="JetBrains Mono, Consolas, monospace" font-size="15">localhost:8080</text>
+    <text x="35" y="303" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="15">Use printed local login</text>
+  </g>
+
+  <g transform="translate(1275 180)" filter="url(#shadow)">
+    <rect width="275" height="345" rx="22" fill="#0e2036" stroke="#fb7185" stroke-width="2" />
+    <circle cx="45" cy="45" r="25" fill="#fb7185" />
+    <text x="45" y="54" text-anchor="middle" fill="#28050c" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="800">5</text>
+    <text x="82" y="54" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="25" font-weight="700">Stop</text>
+    <rect x="48" y="98" width="179" height="100" rx="12" fill="#06121f" stroke="#405a75" />
+    <circle cx="67" cy="116" r="5" fill="#fb7185" />
+    <circle cx="84" cy="116" r="5" fill="#fbbf24" />
+    <circle cx="101" cy="116" r="5" fill="#4ade80" />
+    <text x="63" y="155" fill="#fda4af" font-family="JetBrains Mono, Consolas, monospace" font-size="18">$ ./stop.sh</text>
+    <text x="63" y="181" fill="#7dd3fc" font-family="JetBrains Mono, Consolas, monospace" font-size="13">data kept</text>
+    <text x="28" y="225" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="18">Finish without data loss.</text>
+    <rect x="22" y="250" width="231" height="72" rx="10" fill="#081725" />
+    <text x="35" y="279" fill="#fda4af" font-family="Inter, Segoe UI, sans-serif" font-size="16">Volumes preserved</text>
+    <text x="35" y="303" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="15">Start again anytime</text>
+  </g>
+
+  <g transform="translate(75 580)">
+    <rect width="1450" height="155" rx="20" fill="#091a2c" stroke="#29445f" />
+    <path d="M44 44l18-18 18 18v28H44zM50 72v-22h24v22" fill="none" stroke="#d7df4f" stroke-width="4" stroke-linejoin="round" />
+    <text x="110" y="50" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="24" font-weight="700">Your private local environment</text>
+    <text x="110" y="87" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="20">The launcher creates an ignored .env and prints local credentials only in your terminal.</text>
+    <text x="110" y="120" fill="#fda4af" font-family="Inter, Segoe UI, sans-serif" font-size="19" font-weight="650">Never commit, upload, or screenshot .env values, passwords, provider keys, or customer data.</text>
+  </g>
+</svg>

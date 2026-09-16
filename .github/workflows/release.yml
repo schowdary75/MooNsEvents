@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v6
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          if [ "$TAG" = "v0.1.0" ] && [ -f docs/releases/v0.1.0.md ]; then
+            gh release create "$TAG" \
+              --verify-tag \
+              --title "MooNsEvents $TAG" \
+              --notes-file docs/releases/v0.1.0.md
+          else
+            gh release create "$TAG" \
+              --verify-tag \
+              --title "MooNsEvents $TAG" \
+              --generate-notes
+          fi

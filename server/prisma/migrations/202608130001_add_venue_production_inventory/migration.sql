@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `venue_production_listings` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `line` VARCHAR(200) NOT NULL,
+  `ship` VARCHAR(200) NOT NULL,
+  `runOfShow` VARCHAR(255) NOT NULL,
+  `country` VARCHAR(100) NOT NULL DEFAULT 'India',
+  `date_sailing` VARCHAR(100) NOT NULL,
+  `inside_price` INTEGER NOT NULL DEFAULT 0,
+  `balcony_price` INTEGER NOT NULL DEFAULT 0,
+  `suite_price` INTEGER NOT NULL DEFAULT 0,
+  `status` VARCHAR(24) NOT NULL DEFAULT 'Available',
+  `phone` VARCHAR(100) NULL,
+  `email` VARCHAR(220) NULL,
+  `vendor_id` INTEGER NULL,
+  `b2b_price` INTEGER NOT NULL DEFAULT 0,
+  `is_verified` BOOLEAN NOT NULL DEFAULT false,
+  `created_at` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` DATETIME(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  INDEX `idx_venue_production_vendor`(`vendor_id`),
+  INDEX `idx_venue_production_date`(`date_sailing`),
+  PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

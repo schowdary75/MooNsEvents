@@ -1,0 +1,91 @@
+name: moonsevents-benchmark
+
+x-api-environment: &api-environment
+  NODE_ENV: production
+  PORT: 4000
+  DATABASE_URL: mysql://benchmark:test-password@mysql:3306/moonsevents
+  PLATFORM_DATABASE_URL: mysql://benchmark:test-password@mysql:3306/moonsevents_platform
+  TENANT_DATABASE_BASE_URL: mysql://benchmark:test-password@mysql:3306
+  TENANT_PROVISIONING_DATABASE_URL: mysql://root:test-root-password@mysql:3306
+  TENANT_DATABASE_CONNECTION_LIMIT: 3
+  TENANT_CREDENTIAL_ENCRYPTION_KEY: benchmark-tenant-encryption-key-2026
+  JWT_ACCESS_SECRET: benchmark-jwt-secret-is-not-for-production-2026
+  OPERATOR_JWT_SECRET: benchmark-operator-secret-not-production-2026
+  AUTH_PASSWORD_PEPPER: benchmark-password-pepper-2026
+  BCRYPT_ROUNDS: 10
+  MFA_ENROLLMENT_REQUIRED: 'false'
+  REDIS_URL: redis://redis:6379
+  CRON_ENABLED: 'false'
+  SOCKET_IO_ENABLED: 'false'
+  MAYA_ENABLED: 'false'
+  MAYA_EXTERNAL_WRITES_ENABLED: 'false'
+  LEGACY_ROUTING_ENABLED: 'false'
+  LOG_LEVEL: error
+  LOG_DIRECTORY: /tmp/moonsevents-benchmark-logs
+  UPLOAD_DIRECTORY: /tmp/moonsevents-benchmark-uploads
+  RECORDING_DIRECTORY: /tmp/moonsevents-benchmark-recordings
+  API_RATE_LIMIT: 1000000
+  AUTH_RATE_LIMIT: 1000000
+  OPERATION_RATE_LIMIT: 1000000
+  REALTIME_RATE_LIMIT: 1000000
+  CORS_ORIGINS: http://127.0.0.1:4001
+
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: moonsevents
+      MYSQL_USER: benchmark
+      MYSQL_PASSWORD: test-password
+      MYSQL_ROOT_PASSWORD: test-root-password
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --performance-schema=ON
+    ports:
+      - '${BENCHMARK_MYSQL_PORT:-3307}:3306'
+    volumes:
+      - benchmark_mysql:/var/lib/mysql
+      - ./server/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', '127.0.0.1', '-uroot', '-ptest-root-password']
+      interval: 2s
+      timeout: 3s
+      retries: 60
+    cpus: 1.5
+    mem_limit: 2g
+
+  redis:
+    image: redis:7.4-alpine
+    command: redis-server --save '' --appendonly no --maxmemory-policy noeviction
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 2s
+      timeout: 2s
+      retries: 60
+    cpus: 0.5
+    mem_limit: 256m
+
+  api:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    environment: *api-environment
+    command:
+      [
+        'sh',
+        '-c',
+        'npx prisma migrate deploy --schema prisma/platform/schema.prisma && npx prisma migrate deploy && node dist/server.js',
+      ]
+    ports:
+      - '${BENCHMARK_API_PORT:-4001}:4000'
+    depends_on:
+      mysql: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    healthcheck:
+      test: ['CMD', 'wget', '--spider', '-q', 'http://localhost:4000/api/v1/health']
+      interval: 2s
+      timeout: 3s
+      retries: 60
+    cpus: 1.5
+    mem_limit: 2g
+
+volumes:
+  benchmark_mysql:

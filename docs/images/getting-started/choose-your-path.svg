@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title description">
+  <title id="title">Choose your MooNsEvents setup path</title>
+  <description id="description">Three paths: run locally with Docker, contribute through a fork, or collaborate through a feature branch when you have repository write access.</description>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f" />
+      <stop offset="1" stop-color="#102640" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000814" flood-opacity="0.38" />
+    </filter>
+  </defs>
+  <rect width="1600" height="650" rx="28" fill="url(#background)" />
+  <circle cx="1480" cy="80" r="180" fill="#d7df4f" opacity="0.07" />
+  <circle cx="90" cy="610" r="210" fill="#38bdf8" opacity="0.06" />
+
+  <text x="80" y="85" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="42" font-weight="750">Choose the path that matches your goal</text>
+  <text x="80" y="128" fill="#a9bdd2" font-family="Inter, Segoe UI, sans-serif" font-size="23">You only need one path. Each keeps credentials private and protected main unchanged.</text>
+
+  <g transform="translate(70 180)" filter="url(#shadow)">
+    <rect width="450" height="390" rx="24" fill="#0e2036" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="62" cy="62" r="34" fill="#38bdf8" />
+    <path d="M43 50h38v25H43zM48 55h28v15H48zM55 79h14" fill="none" stroke="#06121f" stroke-width="5" stroke-linecap="round" />
+    <text x="112" y="55" fill="#7dd3fc" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">PATH 1</text>
+    <text x="112" y="84" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="27" font-weight="700">Run and explore</text>
+    <text x="40" y="138" fill="#dce7f3" font-family="Inter, Segoe UI, sans-serif" font-size="21">
+      <tspan x="40" dy="0">For non-developers, evaluators,</tspan>
+      <tspan x="40" dy="31">events teams, and first-time users.</tspan>
+    </text>
+    <g transform="translate(40 220)">
+      <rect width="370" height="62" rx="12" fill="#081725" />
+      <text x="22" y="39" fill="#86efac" font-family="JetBrains Mono, Consolas, monospace" font-size="22">./start.sh</text>
+    </g>
+    <text x="40" y="329" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="19">Needs: Git + Docker</text>
+    <text x="40" y="360" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="19">GitHub access: none</text>
+  </g>
+
+  <g transform="translate(575 180)" filter="url(#shadow)">
+    <rect width="450" height="390" rx="24" fill="#0e2036" stroke="#a78bfa" stroke-width="2" />
+    <circle cx="62" cy="62" r="34" fill="#a78bfa" />
+    <path d="M48 45h27l9 9v28H48zM75 45v11h9M57 66h18M57 75h14" fill="none" stroke="#100b22" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+    <text x="112" y="55" fill="#c4b5fd" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">PATH 2</text>
+    <text x="112" y="84" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="27" font-weight="700">Contribute publicly</text>
+    <text x="40" y="138" fill="#dce7f3" font-family="Inter, Segoe UI, sans-serif" font-size="21">
+      <tspan x="40" dy="0">For community contributors without</tspan>
+      <tspan x="40" dy="31">write access to MooNsEvents.</tspan>
+    </text>
+    <g transform="translate(40 220)">
+      <rect width="370" height="62" rx="12" fill="#081725" />
+      <text x="22" y="39" fill="#ddd6fe" font-family="JetBrains Mono, Consolas, monospace" font-size="20">Fork → Branch → PR</text>
+    </g>
+    <text x="40" y="329" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="19">Push to: your fork</text>
+    <text x="40" y="360" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="19">Merge target: MooNsEvents main</text>
+  </g>
+
+  <g transform="translate(1080 180)" filter="url(#shadow)">
+    <rect width="450" height="390" rx="24" fill="#0e2036" stroke="#d7df4f" stroke-width="2" />
+    <circle cx="62" cy="62" r="34" fill="#d7df4f" />
+    <path d="M45 59h12a11 11 0 0 1 11 11v12M45 59l10-10M45 59l10 10M79 45v37M73 51l6-6 6 6" fill="none" stroke="#151802" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="112" y="55" fill="#e8ef7a" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="2">PATH 3</text>
+    <text x="112" y="84" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="27" font-weight="700">Collaborate directly</text>
+    <text x="40" y="138" fill="#dce7f3" font-family="Inter, Segoe UI, sans-serif" font-size="21">
+      <tspan x="40" dy="0">For invited collaborators with</tspan>
+      <tspan x="40" dy="31">repository write access.</tspan>
+    </text>
+    <g transform="translate(40 220)">
+      <rect width="370" height="62" rx="12" fill="#081725" />
+      <text x="22" y="39" fill="#e8ef7a" font-family="JetBrains Mono, Consolas, monospace" font-size="19">Clone → Branch → PR</text>
+    </g>
+    <text x="40" y="329" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="19">Push to: MooNsEvents branch</text>
+    <text x="40" y="360" fill="#9fb2c8" font-family="Inter, Segoe UI, sans-serif" font-size="19">Never push protected main</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+{
+  "name": "MooNs client event portal",
+  "short_name": "MooNs Events",
+  "start_url": "/client-hub",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#075985",
+  "icons": [{ "src": "/favicon.ico", "sizes": "256x256", "type": "image/x-icon" }]
+}
