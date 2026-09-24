@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2ea44f?style=flat-square" alt="License: MIT" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Source--Available-2ea44f?style=flat-square" alt="License: Source-Available" /></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-24-5FA04E?style=flat-square&amp;logo=nodedotjs&amp;logoColor=white" alt="Node.js 24" /></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript 5" /></a>
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&amp;logo=react&amp;logoColor=111827" alt="React 19" /></a>
@@ -34,6 +34,12 @@
 MooNsEvents connects event CRM, package &amp; tier curation, guest lists, RSVPs, seating &amp; QR check-in, supplier RFQs, quotations, bookings, run-of-show production schedules, payments, customer event portal, and Maya-assisted workflows in one multi-tenant platform.
 
 > **Ready to use:** The included stack runs the core CRM, event packages, quotations, bookings, projects, run-of-show schedules, guest lists, seating, vendors, and operations workflows locally. Provider-backed features such as AI, email, telephony, payments, SSO, and WhatsApp become available after you add your own credentials. Complete the [production-readiness checklist](docs/PRODUCTION_READINESS.md) before handling real customer, payment, or guest identity data.
+>
+> [!IMPORTANT]
+> **Forking, Licensing & Branding Policy:**
+> Developers and teams are welcome to fork this repository and develop locally under the [MooNs Source-Available Community License](LICENSE).
+> **Removing or altering our licenses, copyright notices, trademarks, or MooNs branding is strictly illegal.**
+> Any fork, modification, or derivative project MUST retain full MooNs branding, logos, and licensing intact. Sublicensing or relicensing under MIT or other permissive licenses is strictly prohibited.
 
 ## Start here — choose what you want to do
 
@@ -49,8 +55,9 @@ MooNsEvents connects event CRM, package &amp; tier curation, guest lists, RSVPs,
 | 🛡️ **[Read the security policy →](SECURITY.md)** | Private vulnerability reporting and rules for protecting client and guest data |
 | 💬 **[Get project support →](SUPPORT.md)** | Setup questions, bug reports, feature requests, and safe support channels |
 | 🧭 **[Understand project governance →](GOVERNANCE.md)** | Maintainer roles, decisions, reviews, releases, and roadmap ownership |
+| ⚖️ **[Understand licensing and branding →](LICENSE)** | Source-available evaluation, forking rules, and brand protection terms |
 
-Repository documents are also available through GitHub's **README**, **Contributing**, **Code of conduct**, **MIT license**, and **Security** tabs above this page.
+Repository documents are also available through GitHub's **README**, **Contributing**, **Code of conduct**, **License**, and **Security** tabs above this page.
 
 ## See the application before installing
 
@@ -359,7 +366,15 @@ All participants are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT
 
 ---
 
-## License
+## License & Branding Protection
 
-MooNsEvents is open-source software licensed under the [MIT License](LICENSE).
+Copyright &copy; 2026 **MooNs** / **MooNsEvents**. All Rights Reserved.
+
+MooNsEvents is distributed under the **[MooNs Source-Available Community License](LICENSE)**:
+
+1. **Forking & Local Development:** You are free to fork this repository, clone it, develop with it, and test it locally for personal and non-commercial evaluation.
+2. **Preservation of Branding & Licensing:** Any fork or modification MUST retain all MooNs branding, logos, and licenses. Removing, obscuring, or stripping MooNs branding or copyright notices is **strictly illegal** and constitutes intentional copyright and trademark infringement.
+3. **No Unlicensed Relicensing:** Forks cannot be relicensed under MIT, Apache, GPL, or any other permissive or alternative license.
+4. **Commercial Hosting Restricted:** Multi-tenant SaaS hosting or commercial production deployment requires prior written agreement from MooNs.
+
 Third-party notices and dependencies are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
