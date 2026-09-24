@@ -22,6 +22,7 @@
   <a href="https://github.com/schowdary75/MooNsEvents/forks"><img src="https://img.shields.io/github/forks/schowdary75/MooNsEvents?style=flat-square&amp;logo=github" alt="GitHub forks" /></a>
   <a href="https://github.com/schowdary75/MooNsEvents/graphs/contributors"><img src="https://img.shields.io/github/contributors/schowdary75/MooNsEvents?style=flat-square&amp;logo=github" alt="GitHub contributors" /></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributions-welcome-6f42c1?style=flat-square" alt="Contributions welcome" /></a>
+  <a href="https://github.com/sponsors/schowdary75"><img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=flat-square&amp;logo=githubsponsors&amp;logoColor=white" alt="Sponsor schowdary75" /></a>
   <a href="docs/PRODUCT_TOUR.md"><img src="https://img.shields.io/badge/product-tour-2C847C?style=flat-square&amp;logo=googlechrome&amp;logoColor=white" alt="Product tour" /></a>
 </p>
 
@@ -363,6 +364,20 @@ Contributions are warmly welcome! Whether you are improving run-of-show timeline
 Contributors are honored in the [Hall of Fame](docs/community/HALL_OF_FAME.md), the [Leaderboard](docs/community/LEADERBOARD.md), and are eligible for [Digital Certificates](docs/community/CERTIFICATES.md).
 
 All participants are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find **MooNsEvents** valuable for your business, architecture research, or personal development, please consider supporting ongoing open-source engineering through **[GitHub Sponsors](https://github.com/sponsors/schowdary75)**.
+
+> *"Your sponsorship directly fuels independent research, infrastructure upkeep, security hardening, and continuous feature delivery across the MooNs ecosystem."*
+
+<p align="left">
+  <a href="https://github.com/sponsors/schowdary75">
+    <img src="https://img.shields.io/badge/Sponsor_schowdary75-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor schowdary75 on GitHub Sponsors" />
+  </a>
+</p>
 
 ---
 
