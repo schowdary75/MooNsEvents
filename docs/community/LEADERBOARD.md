@@ -6,9 +6,9 @@ The leaderboard celebrates accepted community work across code, tests, documenta
 accessibility, design, and issue research. Maintainers and automated accounts are intentionally
 excluded.
 
-| Rank | Contributor                        | Badge                              | Merged PRs | Accepted issues | Roadmap completions | Commits |  Score |
-| ---: | ---------------------------------- | ---------------------------------- | ---------: | --------------: | ------------------: | ------: | -----: |
-|    1 | [@MFA-G](https://github.com/MFA-G) | First Timeline · 🏆 Roadmap Champion |          1 |               0 |                   1 |       1 | **16** |
+| Rank | Contributor                             | Badge | Merged PRs | Accepted issues | Roadmap completions | Commits | Score |
+| ---: | --------------------------------------- | ----- | ---------: | --------------: | ------------------: | ------: | ----: |
+|    — | No community contributions recorded yet | —     |          0 |               0 |                   0 |       0 | **0** |
 
 ## Scoring
 
